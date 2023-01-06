@@ -62,6 +62,51 @@ ol, ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--accent-green);
+}
+
 body{
     font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-black);
+    color: var(--text-white);/*temporary*/
+    max-width: 1440px;
+    margin: 0 auto;
 }
+
+.social-links svg path:hover{
+    fill: var(--accent-green);
+}
+
+/*HEADER*/
+header{
+    margin-top: 2.4375rem;
+}
+
+.wrapper{
+    width: 77.1%; /*desktop*/
+    margin: 0 auto;
+}
+
+.main-heading{
+    font-size: 2rem;
+}
+.header{
+    display: flex;
+    column-gap: 44.75rem;
+}
+
+.social-links{
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+
+
+
