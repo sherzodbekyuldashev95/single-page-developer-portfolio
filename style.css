@@ -98,7 +98,7 @@ header{
 }
 .header{
     display: flex;
-    column-gap: 44.75rem;
+    column-gap: 36.75rem;
 }
 
 .social-links{
@@ -106,6 +106,33 @@ header{
     column-gap: 2rem;
     align-items: center;
 }
+
+@media only screen and (max-width: 500px) {
+    header {
+        margin-top: 1.25rem;
+    }
+
+    .wrapper {
+        width: 60.4%;
+    }
+
+    .main-heading {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        margin-top: 1.25rem;
+        column-gap: 1.6rem;
+        align-content: center;
+    }
+}
+
+
 
 
 
