@@ -75,7 +75,7 @@ ol, ul{
 
 img{
     display: inline-block;
-    width: 100% ;
+    width: 100%;
 }
 
 a{
@@ -94,8 +94,7 @@ body{
     background-color: var(--bg-body);
     color: var(--clr-text-white);/*temporary*/
     font-size: var(--fs-paragraph-18);
-    max-width: 1440px;
-    overflow: hidden;
+    /* max-width: 1440px; */
     margin: 0 auto;
 }
 
@@ -154,13 +153,14 @@ header{
 
 /*header in mobile version*/
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     header {
         margin-top: 1.25rem;
     }
 
     .wrapper {
         width: 92%;
+        justify-content: center;
     }
 
     .main-heading {
@@ -180,7 +180,7 @@ header{
 }
 
 
-/*hero section*/
+/*hero section desktop*/
 
 .hero{
     position: relative;
@@ -248,4 +248,82 @@ header{
     position: absolute;
     width: 100%;
     height: 90%;
+}
+
+/*hero section mobile*/
+
+@media (max-width: 600px){
+    .hero {
+        overflow: visible;
+    }
+
+    .flex{
+        flex-wrap: wrap-reverse;
+    }
+    .hero{
+        bottom: 0;
+    }
+
+    .social-links svg path {
+        fill: rgb(253, 251, 251);
+        transition: fill 0.5s ease-out;
+    }
+
+    .avatar {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        max-height: 320px;
+    }
+
+    .avatar img {
+        min-width: 193px;
+        max-width: 200px;
+    }
+
+    .hero-info {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    .hero-info img { 
+        position: absolute;
+        width: 530px;
+        height: 129px;
+        z-index: -999;
+        top: -450px;
+        right: -500px;
+    }
+
+    .heading-h2{
+        font-size: var(--fs-heading-mobile-40);
+        letter-spacing: -1.14px;
+    }
+
+    .heading-h2 span {
+        border-bottom: 4px solid var(--clr-accent-green);
+        font-size: inherit;
+    }
+
+    .hero-message {
+        position: relative;
+        top: -130px;
+    }
+
+    .long-text {
+        margin-top: 1.25rem;
+        width: 100%;
+        font-size: var(--fs-paragraph-18);
+        font-weight: var(--fw-500);
+        line-height: var(--lh-paragraph-desktop);
+    }
+
+    .hero-message a {
+        font-weight: var(--fw-700);
+        letter-spacing: 2.28571px;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+        border-bottom: 2px solid var(--clr-accent-green);
+    }
 }
