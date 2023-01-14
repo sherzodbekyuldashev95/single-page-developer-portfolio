@@ -17,6 +17,7 @@
 
     /*Font size mobile*/
     --fs-heading-mobile-40: 2.6rem;
+    --fs-heading-mobile-32: 2rem;
     --fs-paragraph-mobile-16: 1rem;
 
     /*line-heigh*/
@@ -34,27 +35,22 @@
     /*margin and paddings*/
     --sectionsMargin-mobile: 5rem;
     --projectSection-margin: 1.25rem;
-    /*row and column gaps: desktop*/
 
     /*Experience-section*/
     --rowGap-experience-desktop: 3.625rem;
     --columnGap-experience-desktop: 2.1875rem;
 
+    /*Experience-section mobile*/
+    --rowGap-experience-mobile: 1.5rem;
+
     /*Project-section*/
     --rowGap-project-desktop: 4.3125rem;
     --columnGap-project-desktop: 1.875rem;
 
-    /*row and column gaps: mobile*/
-
-    /*Experience-section*/
-    --rowGap-experience-mobile: 1.5rem;
-
-    /*Project-section*/
+    /*Project-section mobile*/
     --rowGap-project-mobile: 2.5rem;
 
-
     --container: 69.375rem;
-
 
 }
 
@@ -89,12 +85,21 @@ a:hover{
     color: var(--clr-accent-green);
 }
 
+h1, h2{
+    font-weight: var(--fw-700);
+}
+
+p{
+    font-weight: var(--fw-500);
+    line-height: 1.56;
+}
+
 body{
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg-body);
     color: var(--clr-text-white);/*temporary*/
     font-size: var(--fs-paragraph-18);
-    /* max-width: 1440px; */
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -104,7 +109,11 @@ body{
     margin: 0 auto;
 }
 
-@media (max-width: 500px){
+.flex { /*to save some lines of code*/
+    display: flex;
+}
+
+@media (max-width: 600px){
     .wrapper {
         width: calc(100% - 2rem);
         max-width: var(--container);
@@ -120,10 +129,6 @@ body{
 
 .social-links svg path:hover{
     fill: var(--clr-accent-green);
-}
-
-.flex{
-    display: flex;
 }
 
 /*HEADER*/
@@ -154,6 +159,10 @@ header{
 /*header in mobile version*/
 
 @media (max-width: 600px) {
+    body{
+        text-align: center;
+    }
+
     header {
         margin-top: 1.25rem;
     }
@@ -182,7 +191,7 @@ header{
 
 /*hero section desktop*/
 
-.hero{
+#hero{
     position: relative;
     bottom: 80px;
     overflow: hidden;
@@ -205,7 +214,6 @@ header{
 
 .heading-h2{
     font-size: var(--fs-heading-desktop-88);
-    font-weight: var(--fw-700);
     letter-spacing: -2.5px;
     line-height: 1;
 }
@@ -223,8 +231,6 @@ header{
 .long-text{
     margin-top: 2.3rem;
     width: 65.44%;
-    font-size: var(--fs-paragraph-18);
-    font-weight: var(--fw-500);
     line-height: var(--lh-paragraph-desktop);
 }
 
@@ -253,15 +259,13 @@ header{
 /*hero section mobile*/
 
 @media (max-width: 600px){
-    .hero {
+    #hero {
         overflow: visible;
+        bottom: 0;
     }
 
     .flex{
         flex-wrap: wrap-reverse;
-    }
-    .hero{
-        bottom: 0;
     }
 
     .social-links svg path {
@@ -287,7 +291,7 @@ header{
         text-align: center;
     }
 
-    .hero-info img { 
+    .hero-info img {
         position: absolute;
         width: 530px;
         height: 129px;
@@ -314,8 +318,6 @@ header{
     .long-text {
         margin-top: 1.25rem;
         width: 100%;
-        font-size: var(--fs-paragraph-18);
-        font-weight: var(--fw-500);
         line-height: var(--lh-paragraph-desktop);
     }
 
@@ -326,4 +328,76 @@ header{
         margin-top: 1.5rem;
         border-bottom: 2px solid var(--clr-accent-green);
     }
+}
+
+/*skill-set section*/
+
+#skill-set .wrapper{
+    border-top: 1px solid var(--clr-text-white);
+    padding-top: 4.5rem;
+}
+
+
+.skill{
+    width: 31.08%;
+}
+
+.skill h2{
+    font-size: var(--fs-heading-48);
+    letter-spacing: -1.5px;
+    line-height: 1.17;
+}
+
+#skill-set .flex{
+    flex-wrap: wrap;
+    gap: var(--rowGap-experience-desktop) var(--columnGap-experience-desktop);
+}
+
+.bg-img{
+    overflow: hidden;
+    position: relative;
+    bottom: 80px;
+    z-index: -1;
+}
+
+.bg-img .img{
+    background: url(assets/images/pattern-rings.svg) no-repeat;
+    width: 530px;
+    height: 129px;
+    position: relative;
+    left: 1150px;
+}
+
+@media (max-width: 600px){
+    #skill-set{
+        margin-top: var(--sectionsMargin-mobile);
+    }
+
+    #skill-set .wrapper {
+        padding: 2.5rem 0;
+        border-bottom: 1px solid var(--clr-text-white);
+    }
+
+    .skill{
+        text-align: center;
+        width: 100%;
+    }
+    .skill h2{
+        font-size: var(--fs-heading-mobile-32);
+    }
+
+    #skill-set .flex {
+        flex-direction: column;
+        align-items: center;
+        row-gap: var(--rowGap-experience-mobile);
+    }
+
+    .bg-img {
+        bottom: 65px;
+    }
+
+    .bg-img .img {
+        left: 200px;
+    }
+
 }
