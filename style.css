@@ -85,7 +85,7 @@ a:hover{
     color: var(--clr-accent-green);
 }
 
-h1, h2{
+h1, h2, h3{
     font-weight: var(--fw-700);
 }
 
@@ -118,6 +118,16 @@ body{
         width: calc(100% - 2rem);
         max-width: var(--container);
         margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 700px) and (max-width:1036px) {
+    .wrapper {
+        width: calc(100% - 3.75rem);
+        max-width: var(--container);
+        margin: 0 auto;
+        justify-content: center;
     }
 }
 
@@ -137,18 +147,20 @@ header{
     position: relative;
     z-index: 10000;
 }
-
-.wrapper{
-    width: 77.1%; /*desktop*/
+/*desktop*/
+/* .wrapper{
+    width: 77.1%; 
     margin: 0 auto;
     max-width: 1110px;
-}
+} */
 
 .main-heading{
     font-size: 2rem;
 }
 .header{
-    column-gap: 36.75rem;
+    /* column-gap: 36.75rem; */
+    justify-content: space-between;
+    padding-right: 1.875rem;
 }
 
 .social-links{
@@ -167,11 +179,6 @@ header{
         margin-top: 1.25rem;
     }
 
-    .wrapper {
-        width: 92%;
-        justify-content: center;
-    }
-
     .main-heading {
         font-size: 1.5rem;
     }
@@ -179,6 +186,7 @@ header{
     .header {
         flex-direction: column;
         align-items: center;
+        padding-right: 0;
     }
 
     .social-links {
@@ -229,22 +237,22 @@ header{
 }
 
 .long-text{
-    margin-top: 2.3rem;
+    margin: 2.3rem 0 4.125rem;
     width: 65.44%;
     line-height: var(--lh-paragraph-desktop);
 }
 
-.hero-message a{
+.cta{
     font-weight: var(--fw-700);
-    letter-spacing: 2.28571px;
+    letter-spacing: 2.29px;
     text-transform: uppercase;
-    margin-top: 4.125rem;
     border-bottom: 2px solid var(--clr-accent-green);
+    height: 38px;
 }
 
 
 .avatar {
-    width: 445px;
+    width: 40.09%;
     height: 720px;
     position: relative;
 }
@@ -401,3 +409,80 @@ header{
     }
 
 }
+
+/*projects section*/
+
+#projects{
+    margin-bottom: 100px; /*temp*/
+}
+
+.section-title{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-listing {
+    margin-top: 5rem;
+}
+
+ul.flex{
+    gap: var(--rowGap-project-desktop) var(--columnGap-project-desktop);
+    flex-wrap: wrap;
+}
+.work{
+    width: 48.64%;
+    height: auto;
+}
+
+.work-description{
+    margin-top: 1.25rem;
+}
+
+h3{
+    text-transform: uppercase;
+}
+.work-description div{
+    column-gap: 1.125rem;
+}
+
+
+/*adjustment to add hover effect*/
+.work-img {
+    position: relative;
+}
+
+.work-img img {
+    display: block;
+}
+
+.links .project-width {
+    width: 155px;
+}
+
+.links .code-width {
+    width: 120px;
+}
+
+.work-img .links {
+    position: absolute;
+}
+
+.work-img .links-0 {
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 160px;
+}
+
+.work:hover .work-img img {
+    filter: brightness(0);
+    filter: opacity(30%);
+}
+
+.work-img:hover .links-0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+}
+
