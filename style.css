@@ -34,7 +34,7 @@
 
     /*margin and paddings*/
     --sectionsMargin-mobile: 5rem;
-    --projectSection-margin: 1.25rem;
+    --projectSection-margin-mobile: 1.25rem;
 
     /*Experience-section*/
     --rowGap-experience-desktop: 3.625rem;
@@ -441,8 +441,12 @@ ul.flex{
 h3{
     text-transform: uppercase;
 }
-.work-description div{
+.work-description .flex{
     column-gap: 1.125rem;
+}
+
+.links-mob{
+    display: none;
 }
 
 
@@ -486,3 +490,62 @@ h3{
     row-gap: 3rem;
 }
 
+/*project section mobile*/
+
+@media (max-width: 600px){
+    .project-listing{
+        margin-top: 2.5rem;
+    }
+
+    ul.flex{
+        row-gap: var(--rowGap-project-mobile);
+    }
+
+    .work{
+        width: 100%;
+    }
+
+    h3{
+        text-align: left;
+    }
+}
+
+/*project section tablet*/
+@media (min-width: 700px) and (max-width:1102px){
+    .project-listing{
+        margin-top: 3.75rem;
+    }
+
+    ul.flex{
+        gap: 3.75rem 1.5rem;
+    }
+
+    .work{
+        width: 48%;
+    }
+}
+
+/*in order not to duplicate code i found that mobile and tablet share identical features so i mwrote a code which applies to both*/
+/*mobile and tablet*/
+@media (max-width: 1102px) {
+    .work-img .links-0 {
+        display: none;
+    }
+
+    .work:hover .work-img img {
+        filter: none;
+        filter: none;
+    }
+
+    .work-img:hover .links-0 {
+        display: none;
+    }
+
+    /*this is the end of canceled code*/
+
+    .links-mob {
+        display: flex;
+        column-gap: 1.875rem;
+        margin-top: var(--projectSection-margin-mobile);
+    }
+}
