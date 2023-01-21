@@ -423,10 +423,6 @@ header{
 
 /*projects section*/
 
-#projects{
-    /* margin-bottom: 100px; */
-}
-
 .section-title{
     justify-content: space-between;
     align-items: center;
@@ -642,6 +638,32 @@ button:hover{
     color: var(--clr-accent-green);
 }
 
+@media (max-width: 1090px){
+    #contact{
+        margin-top: 5rem;
+    }
+
+    .contact-info{
+        width: 100%;
+    }
+
+    .contact_form {
+        margin-top: 3.125rem;
+        width: 100%;
+    }
+
+    .contact-info p {
+        margin-top: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .contact_wrapper {
+        padding: 3.75rem 0 5.44rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 13.50rem;
+    }
+}
 
 
 
