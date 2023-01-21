@@ -94,6 +94,16 @@ p{
     line-height: 1.56;
 }
 
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 body{
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg-body);
@@ -242,12 +252,13 @@ header{
     line-height: var(--lh-paragraph-desktop);
 }
 
-.cta{
+.cta, button{
     font-weight: var(--fw-700);
     letter-spacing: 2.29px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--clr-accent-green);
     height: 38px;
+    color: var(--clr-text-white);
 }
 
 
@@ -413,7 +424,7 @@ header{
 /*projects section*/
 
 #projects{
-    margin-bottom: 100px; /*temp*/
+    /* margin-bottom: 100px; */
 }
 
 .section-title{
@@ -549,3 +560,89 @@ h3{
         margin-top: var(--projectSection-margin-mobile);
     }
 }
+
+/*Contacts*/
+
+#contact {
+    margin-top: 8.69rem;
+    background-color: var(--bg-contact);
+    height: auto;
+}
+
+.contact-info{
+    width: 40.1%;
+}
+
+.contact-info p{
+    margin-top: 2.25rem;
+}
+
+.contact_wrapper{
+    padding: 5.25rem 0 5.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 13.50rem;
+}
+
+.contact_form {
+    width: 40.1%;
+}
+
+.control input, .control textarea{
+    color: var(--clr-text-white);
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.625;
+    display: block;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--clr-text-white);
+    padding: 0 0 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.control textarea{
+    height: 107px;
+}
+
+.control > *::placeholder{
+    color: var(--clr-text-white);
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+.control.align-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+input[type *='email']:focus:invalid {
+    border-bottom: 1px solid var(--clr-errorMessage);
+}
+
+input[type *='email']:focus:valid {
+    border-bottom: 1px solid var(--clr-accent-green);
+}
+
+.control input:focus-visible, .control textarea:focus-visible{
+    border-bottom: 1px solid  var(--clr-accent-green);
+}
+
+button{
+    display: inline-block;
+    background-color: transparent;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+}
+
+button:hover{
+    color: var(--clr-accent-green);
+}
+
+
+
+
+
