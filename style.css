@@ -349,6 +349,33 @@ header{
     }
 }
 
+@media (min-width: 700px) and (max-width: 1102px){
+    #hero {
+        overflow: visible;
+        bottom: 0;
+        margin-bottom: 3.75rem;
+    }
+
+    .social-links svg path {
+        fill: rgb(253, 251, 251);
+    }
+
+    .avatar {
+        position: relative;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .avatar img {
+        position: absolute;
+        right: -30px;
+       width: 350px;
+       height: 650px;
+       z-index: -10;
+    }
+}
+
 /*skill-set section*/
 
 #skill-set .wrapper{
@@ -665,6 +692,40 @@ button:hover{
     }
 }
 
+/*footer*/
+
+#footer{
+    background-color: var(--bg-contact);
+}
+
+.footer_wrapper{
+    border-top: 1px solid var(--clr-text-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 2.94rem 0 5.75rem;
+    align-items: center;
+}
+
+#footer ul li svg path{
+    fill: #fff;
+}
+
+#footer ul li svg path:hover{
+    fill: var(--clr-accent-green);
+}
+
+@media (max-width: 600px){
+    .footer_wrapper {
+        flex-direction: column;
+        padding: 2.44rem 0 3.75rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1102px){
+    .footer_wrapper {
+        padding: 1.875rem 0 2.5rem;
+    }
+}
 
 
 
