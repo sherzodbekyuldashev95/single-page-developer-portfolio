@@ -85,6 +85,10 @@ a:hover{
     color: var(--clr-accent-green);
 }
 
+::selection{
+    background-color: var(--clr-accent-green);
+}
+
 h1, h2, h3{
     font-weight: var(--fw-700);
 }
