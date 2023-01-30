@@ -113,7 +113,7 @@ body{
     background-color: var(--bg-body);
     color: var(--clr-text-white);/*temporary*/
     font-size: var(--fs-paragraph-18);
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
 }
 
@@ -340,6 +340,7 @@ header{
 
     .long-text {
         margin-top: 1.25rem;
+        margin-bottom: 2rem;
         width: 100%;
         line-height: var(--lh-paragraph-desktop);
     }
@@ -349,6 +350,7 @@ header{
         letter-spacing: 2.28571px;
         text-transform: uppercase;
         margin-top: 1.5rem;
+        margin-bottom: 4rem;
         border-bottom: 2px solid var(--clr-accent-green);
     }
 }
@@ -382,6 +384,10 @@ header{
 
 /*skill-set section*/
 
+#skill-set{
+    display: none; /*temp. made this section invisible*/
+}
+
 #skill-set .wrapper{
     border-top: 1px solid var(--clr-text-white);
     padding-top: 4.5rem;
@@ -404,6 +410,7 @@ header{
 }
 
 .bg-img{
+    display: none; /*temp. made it invisible*/
     overflow: hidden;
     position: relative;
     bottom: 80px;
@@ -457,6 +464,10 @@ header{
 .section-title{
     justify-content: space-between;
     align-items: center;
+}
+
+.section-title a{
+    display: none;
 }
 
 .project-listing {
