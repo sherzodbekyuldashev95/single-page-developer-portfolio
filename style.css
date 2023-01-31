@@ -77,12 +77,18 @@ img{
 a{
     text-decoration: none;
     color: inherit;
-    transition: color 0.5s ease-out;
+    transition: color 0.1s ease-out;
     display: inline-block;
 }
 
 a:hover{
     color: var(--clr-accent-green);
+}
+
+a:focus-visible{
+    padding: 5px;
+    outline: none;
+    border: 2px dashed var(--clr-accent-green);
 }
 
 ::selection{
@@ -668,16 +674,25 @@ input[type *='email']:focus:valid {
     border-bottom: 1px solid  var(--clr-accent-green);
 }
 
+
+
 button{
     display: inline-block;
     background-color: transparent;
-    border-top: hidden;
-    border-right: hidden;
-    border-left: hidden;
+    border: 2px solid var(--clr-text-white);
+    padding: 5px;
+    height: 48px;
+    transition: border 0.3s ease-out,color 0.5s ease-out;
+}
+
+button:focus{
+    outline: none;
+    border: 2px dashed var(--clr-accent-green);
 }
 
 button:hover{
     color: var(--clr-accent-green);
+    border-color: var(--clr-accent-green);
 }
 
 @media (max-width: 1090px){
